@@ -15,6 +15,13 @@ repositories {
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	compileOnly 'org.projectlombok:lombok:1.18.26'
+
+	// GRPC
+	implementation 'io.grpc:grpc-netty-shaded:1.54.0'
+	implementation 'io.grpc:grpc-protobuf:1.54.0'
+	implementation 'io.grpc:grpc-stub:1.54.0'
+	testImplementation 'io.grpc:grpc-testing:1.54.0'
 }
 
 tasks.named('test') {
