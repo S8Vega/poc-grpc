@@ -1,18 +1,18 @@
 package com.thechaoscompany.server.service;
 
-import com.thechaoscompany.server.entities.School;
+import com.thechaoscompany.server.entities.SchoolEntity;
 
 import java.util.List;
 import java.util.concurrent.CompletableFuture;
 
 public interface SchoolService {
-    CompletableFuture<School> save(School school);
+    CompletableFuture<SchoolEntity> save(SchoolEntity schoolEntity);
 
-    CompletableFuture<School> getOneById(Long id);
+    CompletableFuture<SchoolEntity> getOneById(Long id);
 
-    CompletableFuture<List<School>> getAll();
+    CompletableFuture<List<SchoolEntity>> getAll();
 
-    CompletableFuture<School> update(School school, Long id);
+    CompletableFuture<SchoolEntity> update(SchoolEntity schoolEntity, Long id);
 
-    CompletableFuture<School> delete(Long id);
+    CompletableFuture<SchoolEntity> delete(Long id);
 }
