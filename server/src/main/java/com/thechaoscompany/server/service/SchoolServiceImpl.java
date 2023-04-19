@@ -1,7 +1,7 @@
 package com.thechaoscompany.server.service;
 
-import com.thechaoscompany.server.SchoolRepository;
 import com.thechaoscompany.server.entities.SchoolEntity;
+import com.thechaoscompany.server.repository.SchoolRepository;
 import org.modelmapper.ModelMapper;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.scheduling.annotation.Async;
