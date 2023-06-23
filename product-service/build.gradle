@@ -23,9 +23,12 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	compileOnly 'org.projectlombok:lombok'
-	annotationProcessor 'org.projectlombok:lombok'
-	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.cloud:spring-cloud-starter-grpc'
+	implementation 'io.grpc:grpc-netty-shaded:1.56.0'
+	implementation 'io.grpc:grpc-protobuf:1.56.0'
+	implementation 'io.grpc:grpc-stub:1.56.0'
+	implementation 'com.google.protobuf:protobuf-java:3.23.3'
+
 }
 
 tasks.named('test') {
