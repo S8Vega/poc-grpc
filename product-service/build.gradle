@@ -23,7 +23,7 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-web'
-	implementation 'org.springframework.cloud:spring-cloud-starter-grpc'
+	implementation 'io.github.lognet:grpc-spring-boot-starter:5.1.2'
 	implementation 'io.grpc:grpc-netty-shaded:1.56.0'
 	implementation 'io.grpc:grpc-protobuf:1.56.0'
 	implementation 'io.grpc:grpc-stub:1.56.0'
