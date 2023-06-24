@@ -5,6 +5,7 @@ import com.thechaoscompany.dish.repository.DishRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.LocalDateTime;
 import java.util.List;
 
 @Service
@@ -13,6 +14,7 @@ public class DishService {
     private DishRepository repository;
 
     public void save(Dish dish) {
+        dish.setCreationDate(LocalDateTime.now());
         repository.save(dish);
     }
 
