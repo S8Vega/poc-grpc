@@ -11,12 +11,24 @@ import java.util.List;
 public class RestaurantService {
     @Autowired
     private RestaurantRepository repository;
+    @Autowired
+    private DishService dishService;
 
     public RestaurantEntity save(RestaurantEntity restaurant) {
         return repository.save(restaurant);
     }
 
     public List<RestaurantEntity> getAll() {
-        return (List<RestaurantEntity>) repository.findAll();
+        List<RestaurantEntity> restaurants = (List<RestaurantEntity>) repository.findAll();
+        for (RestaurantEntity restaurant : restaurants) {
+            restaurant.addDishes(dishService.findByRestaurantId(restaurant.getId()));
+        }
+        return restaurants;
+    }
+
+    public RestaurantEntity findById(Long id) {
+        RestaurantEntity restaurant = repository.findById(id).orElseThrow();
+        restaurant.addDishes(dishService.findByRestaurantId(id));
+        return restaurant;
     }
 }
