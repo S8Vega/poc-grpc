@@ -37,7 +37,6 @@ dependencies {
     compileOnly 'org.apache.tomcat:annotations-api:6.0.53'
 }
 
-
 protobuf {
     protoc {
         artifact = "com.google.protobuf:protoc:3.22.3"
