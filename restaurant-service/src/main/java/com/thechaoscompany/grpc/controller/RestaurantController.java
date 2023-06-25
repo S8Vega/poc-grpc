@@ -20,13 +20,18 @@ public class RestaurantController {
     private RestaurantService service;
 
     @PostMapping
-    public ResponseEntity<RestaurantEntity> save(@RequestBody RestaurantEntity restaurant) {
-        RestaurantEntity newRestaurant = service.save(restaurant);
-        return new ResponseEntity<>(newRestaurant, HttpStatus.CREATED);
+    public ResponseEntity<RestaurantEntity> save(@RequestBody @NotNull SaveRestaurantRequest request) {
+        RestaurantEntity restaurant = service.save(request.toRestaurantEntity());
+        return new ResponseEntity<>(restaurant, HttpStatus.CREATED);
     }
 
     @GetMapping
     public ResponseEntity<List<RestaurantEntity>> getAll() {
         return ResponseEntity.ok(service.getAll());
+    }
+
+    @GetMapping("/{id}")
+    public ResponseEntity<RestaurantEntity> findById(@PathVariable Long id) {
+        return ResponseEntity.ok(service.findById(id));
     }
 }
