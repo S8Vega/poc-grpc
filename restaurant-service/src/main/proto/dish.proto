@@ -1,0 +1,32 @@
+syntax = "proto3";
+
+package com.thechaoscompany.grpc;
+
+service DishService {
+  rpc Save (SaveDishRequest) returns (Void) {}
+  rpc getAll (Void) returns (DishList) {}
+  rpc findByRestaurantId (FindByRestaurantIdRequest) returns (DishList) {}
+}
+
+message FindByRestaurantIdRequest {
+  int64 restaurant_id = 1;
+}
+
+message DishList{
+  repeated DishGrpc dishes = 1;
+}
+
+message DishGrpc {
+  string id = 1;
+  string creation_date = 2;
+  string name = 3;
+  int64 restaurant_id = 4;
+}
+
+message SaveDishRequest {
+  string name = 1;
+  int64 restaurant_id = 2;
+}
+
+message Void {
+}
