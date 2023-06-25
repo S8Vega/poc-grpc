@@ -1,6 +1,6 @@
-package com.thechaoscompany.dish.model;
+package com.thechaoscompany.grpc.model;
 
-import com.thechaoscompany.dish.Dish;
+import com.thechaoscompany.grpc.Dish;
 import lombok.Builder;
 import lombok.Data;
 import org.springframework.data.annotation.Id;

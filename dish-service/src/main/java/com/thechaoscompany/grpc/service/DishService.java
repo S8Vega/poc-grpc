@@ -1,7 +1,7 @@
-package com.thechaoscompany.dish.service;
+package com.thechaoscompany.grpc.service;
 
-import com.thechaoscompany.dish.model.DishModel;
-import com.thechaoscompany.dish.repository.DishRepository;
+import com.thechaoscompany.grpc.model.DishModel;
+import com.thechaoscompany.grpc.repository.DishRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

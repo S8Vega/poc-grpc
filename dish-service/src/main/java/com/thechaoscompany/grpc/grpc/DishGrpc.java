@@ -1,9 +1,9 @@
-package com.thechaoscompany.dish.grpc;
+package com.thechaoscompany.grpc.grpc;
 
-import com.thechaoscompany.dish.Dish;
-import com.thechaoscompany.dish.DishServiceGrpc;
-import com.thechaoscompany.dish.model.DishModel;
-import com.thechaoscompany.dish.service.DishService;
+import com.thechaoscompany.grpc.Dish;
+import com.thechaoscompany.grpc.DishServiceGrpc;
+import com.thechaoscompany.grpc.model.DishModel;
+import com.thechaoscompany.grpc.service.DishService;
 import io.grpc.stub.StreamObserver;
 import org.lognet.springboot.grpc.GRpcService;
 import org.springframework.beans.factory.annotation.Autowired;

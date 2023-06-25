@@ -1,6 +1,6 @@
 syntax = "proto3";
 
-package com.thechaoscompany.dish;
+package com.thechaoscompany.grpc;
 
 service DishService {
   rpc Save (SaveDishRequest) returns (Void) {}

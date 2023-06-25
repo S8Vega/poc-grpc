@@ -1,6 +1,6 @@
-package com.thechaoscompany.dish.repository;
+package com.thechaoscompany.grpc.repository;
 
-import com.thechaoscompany.dish.model.DishModel;
+import com.thechaoscompany.grpc.model.DishModel;
 import org.springframework.data.mongodb.repository.MongoRepository;
 
 import java.util.List;
